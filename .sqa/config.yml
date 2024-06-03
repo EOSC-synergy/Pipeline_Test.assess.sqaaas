@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       github.com/mattiaBarbo/Pipeline_Test git:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-celadon-lion.sh
-        container: qc.acc_snazzy-olivine-caiman
+        - /usr/bin/env sh .sqa/script.scummy-alizarin-spaniel.sh
+        container: qc.acc_skinny-charcoal-squirrel
   QC.Doc:
     repos:
       github.com/mattiaBarbo/Pipeline_Test find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-seashell-sponge.sh
-        container: qc.doc_stealthy-khaki-kingfisher
+        - /usr/bin/env sh .sqa/script.muggy-champagne-newt.sh
+        container: qc.doc_queasy-wisteria-clam
       github.com/mattiaBarbo/Pipeline_Test git:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-lemon-vole.sh
-        container: qc.doc_jumpy-sangria-capybara
+        - /usr/bin/env sh .sqa/script.crabby-fuchsia-chicken.sh
+        container: qc.doc_foggy-red-spaniel
       github.com/mattiaBarbo/Pipeline_Test markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.woozy-lemon-mongoose.sh
-        container: qc.doc_greasy-cinnabar-quail
+        - /usr/bin/env sh .sqa/script.crappy-russet-grasshopper.sh
+        container: qc.doc_cloudy-crimson-weasel
   QC.Lic:
     repos:
       github.com/mattiaBarbo/Pipeline_Test licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-violet-lizard.sh
-        container: qc.lic_snappy-eggplant-vole
+        - /usr/bin/env sh .sqa/script.queasy-amaranth-bison.sh
+        container: qc.lic_crappy-buff-gharial
   QC.Sec:
     repos:
       github.com/mattiaBarbo/Pipeline_Test bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-periwinkle-wildebeest.sh
-        container: qc.sec_gamy-goldenrod-okapi
+        - /usr/bin/env sh .sqa/script.chummy-rose-spoonbill.sh
+        container: qc.sec_crabby-celadon-birman
   QC.Sty:
     repos:
       github.com/mattiaBarbo/Pipeline_Test flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-azure-oyster.sh
-        container: qc.sty_queasy-denim-opossum
+        - /usr/bin/env sh .sqa/script.pasty-gamboge-wombat.sh
+        container: qc.sty_skinny-pear-buffalo
   QC.Uni:
     repos:
       github.com/mattiaBarbo/Pipeline_Test pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-cerulean-mandrill.sh
-        container: qc.uni_tacky-thistle-cockroach
+        - /usr/bin/env sh .sqa/script.shaky-dandelion-peccary.sh
+        container: qc.uni_shaky-wisteria-sponge
   QC.Ver:
     repos:
       github.com/mattiaBarbo/Pipeline_Test get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.flabby-tangerine-shrew.sh
-        container: qc.ver_pasty-razzmatazz-camel
+        - /usr/bin/env sh .sqa/script.flaky-cream-dingo.sh
+        container: qc.ver_grumpy-orchid-antelope
 timeout: 5400
