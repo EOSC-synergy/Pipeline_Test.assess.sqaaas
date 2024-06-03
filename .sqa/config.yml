@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       github.com/mattiaBarbo/Pipeline_Test git:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-xanthic-bombay.sh
-        container: qc.acc_woozy-viridian-peccary
+        - /usr/bin/env sh .sqa/script.gummy-azure-fox.sh
+        container: qc.acc_lousy-goldenrod-turtle
   QC.Doc:
     repos:
       github.com/mattiaBarbo/Pipeline_Test find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-carmine-spider.sh
-        container: qc.doc_tacky-aquamarine-affenpinscher
+        - /usr/bin/env sh .sqa/script.geeky-orchid-moose.sh
+        container: qc.doc_seedy-grey-opossum
       github.com/mattiaBarbo/Pipeline_Test git:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-brass-lemur.sh
-        container: qc.doc_messy-lime-frise
+        - /usr/bin/env sh .sqa/script.stuffy-tan-pinscher.sh
+        container: qc.doc_homely-lime-boar
       github.com/mattiaBarbo/Pipeline_Test markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-burgundy-dormouse.sh
-        container: qc.doc_silly-ochre-cichlid
+        - /usr/bin/env sh .sqa/script.freaky-linen-abyssinian.sh
+        container: qc.doc_cranky-sangria-chinook
   QC.Lic:
     repos:
       github.com/mattiaBarbo/Pipeline_Test licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-fuchsia-wasp.sh
-        container: qc.lic_woolly-vermilion-tarantula
+        - /usr/bin/env sh .sqa/script.wheezy-alizarin-frigatebird.sh
+        container: qc.lic_chewy-copper-russel
   QC.Sec:
     repos:
       github.com/mattiaBarbo/Pipeline_Test bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.flabby-seashell-bobcat.sh
-        container: qc.sec_slimy-champagne-crocodile
+        - /usr/bin/env sh .sqa/script.skimpy-chartreuse-ibis.sh
+        container: qc.sec_queasy-gamboge-tzu
   QC.Sty:
     repos:
       github.com/mattiaBarbo/Pipeline_Test flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-green-terrier.sh
-        container: qc.sty_snazzy-zucchini-dragon
+        - /usr/bin/env sh .sqa/script.flimsy-alizarin-monkey.sh
+        container: qc.sty_squeaky-dandelion-goose
   QC.Uni:
     repos:
       github.com/mattiaBarbo/Pipeline_Test pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-vermilion-iguana.sh
-        container: qc.uni_chewy-sepia-millipede
+        - /usr/bin/env sh .sqa/script.messy-puce-mau.sh
+        container: qc.uni_gimpy-pumpkin-armadillo
   QC.Ver:
     repos:
       github.com/mattiaBarbo/Pipeline_Test get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-puce-manatee.sh
-        container: qc.ver_shaggy-ivory-macaque
+        - /usr/bin/env sh .sqa/script.cranky-pumpkin-pinscher.sh
+        container: qc.ver_slimy-azure-iguana
 timeout: 5400
