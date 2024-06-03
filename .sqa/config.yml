@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.0.1
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/mattiaBarbo/Pipeline_Test:
+      branch: main
+      repo: https://github.com/mattiaBarbo/Pipeline_Test
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/mattiaBarbo/Pipeline_Test git:
+        commands:
+        - /usr/bin/env sh .sqa/script.smelly-xanthic-bombay.sh
+        container: qc.acc_woozy-viridian-peccary
+  QC.Doc:
+    repos:
+      github.com/mattiaBarbo/Pipeline_Test find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.pretty-carmine-spider.sh
+        container: qc.doc_tacky-aquamarine-affenpinscher
+      github.com/mattiaBarbo/Pipeline_Test git:
+        commands:
+        - /usr/bin/env sh .sqa/script.greasy-brass-lemur.sh
+        container: qc.doc_messy-lime-frise
+      github.com/mattiaBarbo/Pipeline_Test markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.gummy-burgundy-dormouse.sh
+        container: qc.doc_silly-ochre-cichlid
+  QC.Lic:
+    repos:
+      github.com/mattiaBarbo/Pipeline_Test licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.grumpy-fuchsia-wasp.sh
+        container: qc.lic_woolly-vermilion-tarantula
+  QC.Sec:
+    repos:
+      github.com/mattiaBarbo/Pipeline_Test bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.flabby-seashell-bobcat.sh
+        container: qc.sec_slimy-champagne-crocodile
+  QC.Sty:
+    repos:
+      github.com/mattiaBarbo/Pipeline_Test flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.hasty-green-terrier.sh
+        container: qc.sty_snazzy-zucchini-dragon
+  QC.Uni:
+    repos:
+      github.com/mattiaBarbo/Pipeline_Test pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.stealthy-vermilion-iguana.sh
+        container: qc.uni_chewy-sepia-millipede
+  QC.Ver:
+    repos:
+      github.com/mattiaBarbo/Pipeline_Test get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sloppy-puce-manatee.sh
+        container: qc.ver_shaggy-ivory-macaque
+timeout: 5400
